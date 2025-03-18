@@ -1,3 +1,5 @@
+package main
+
 type (
 	Address struct {
 		CEP string `json:"cep"`
