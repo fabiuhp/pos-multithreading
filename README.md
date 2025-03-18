@@ -23,8 +23,7 @@ Siga os passos abaixo para rodar o projeto localmente:
 1. **Clone o repositório**
 
    ```bash
-   git clone https://seu-repositorio-url.git
-   cd nome-do-repositorio
+   git clone https://github.com/fabiuhp/pos-multithreading.git
    ```
 
 2. **Instale as dependências**
@@ -32,7 +31,7 @@ Siga os passos abaixo para rodar o projeto localmente:
    No Go, as dependências são gerenciadas através dos módulos. Caso o repositório já contenha um arquivo `go.mod`, as dependências serão automaticamente baixadas ao rodar o comando de build ou run. Caso não esteja configurado, inicialize o módulo:
 
    ```bash
-   go mod init nome-do-modulo
+   go mod init pos-multithreading
    go mod tidy
    ```
 
@@ -84,25 +83,3 @@ Siga os passos abaixo para rodar o projeto localmente:
 - **main.go**: Contém a função `main` que inicia o servidor HTTP e define a rota `/buscar`.
 - **fetchAddress**: Função utilizada para realizar as requisições assíncronas às APIs externas.
 - **handleCEPRequest**: Handler responsável por processar as requisições, extrair o CEP e disparar as requisições para as APIs.
-
-## Possíveis Melhorias
-
-- Implementação de cache para consultas repetidas.
-- Adicionar logs para monitoramento e depuração.
-- Tratar e retornar mensagens de erro mais detalhadas.
-
-## Contribuição
-
-1. Faça um fork do projeto.
-2. Crie uma branch para sua feature: `git checkout -b minha-nova-feature`
-3. Commit suas alterações: `git commit -am 'Adiciona nova feature'`
-4. Push na branch: `git push origin minha-nova-feature`
-5. Abra um Pull Request.
-
-## Licença
-
-Este projeto está licenciado sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
-
----
-
-Com esses passos, você já estará pronto para executar e testar a API de consulta de endereço. Se tiver alguma dúvida ou sugestão, sinta-se à vontade para abrir uma issue ou contribuir com o projeto!
