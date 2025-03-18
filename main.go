@@ -1,8 +1,15 @@
 package main
 
+import (
+	"encoding/json"
+	"fmt"
+	"net/http"
+	"time"
+)
+
 type (
 	Address struct {
-		CEP string `json:"cep"`
+		CEP        string `json:"cep"`
 		Logradouro string `json:"logradouro"`
 		Bairro     string `json:"bairro"`
 		Cidade     string `json:"cidade"`
@@ -10,11 +17,11 @@ type (
 		APIOrigem  string `json:"api_origem"`
 	}
 	BrasilAPIResponse struct {
-		CEP         string `json:"cep"`
-		State       string `json:"state"`
-		City        string `json:"city"`
+		CEP          string `json:"cep"`
+		State        string `json:"state"`
+		City         string `json:"city"`
 		Neighborhood string `json:"neighborhood"`
-		Street      string `json:"street"`
+		Street       string `json:"street"`
 	}
 	ViaCEPResponse struct {
 		CEP        string `json:"cep"`
